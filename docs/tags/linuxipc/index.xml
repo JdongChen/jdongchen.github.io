@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LinuxIPC on EastSnow</title>
+    <link>https://jdongchen.github.io/tags/linuxipc/</link>
+    <description>Recent content in LinuxIPC on EastSnow</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 28 Oct 2021 10:39:11 +0800</lastBuildDate><atom:link href="https://jdongchen.github.io/tags/linuxipc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>进程间通信</title>
+      <link>https://jdongchen.github.io/blog/%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1/</link>
+      <pubDate>Thu, 28 Oct 2021 10:39:11 +0800</pubDate>
+      
+      <guid>https://jdongchen.github.io/blog/%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1/</guid>
+      <description>&lt;p&gt;IPC是进程间通信的简称。
+在Unix操作系统的演变史中，消息传递经历了如下发展阶段：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;管道(Pipe)：原初仅能在具有共同祖先的进程间通信，后引入了有名管道(FIFO)解决。&lt;/li&gt;
+&lt;li&gt;消息队列(Message queue)：同一主机上有亲缘关系或无亲缘关系的进程间通信。&lt;/li&gt;
+&lt;li&gt;远程过程调用(RPC)：由一个系统(客户主机)上的某个程序调用另一个系统(服务器主机)上的一种方法。
+在Unix操作系统上，共享的文件信息，共享的内存需要同步，各种同步形式如下：&lt;/li&gt;
+&lt;li&gt;记录上锁&lt;/li&gt;
+&lt;li&gt;条件变量&lt;/li&gt;
+&lt;li&gt;互斥锁&lt;/li&gt;
+&lt;li&gt;读写锁&lt;/li&gt;
+&lt;li&gt;信号量&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>IO模型</title>
+      <link>https://jdongchen.github.io/blog/io%E6%A8%A1%E5%9E%8B/</link>
+      <pubDate>Sun, 24 Oct 2021 11:58:08 +0800</pubDate>
+      
+      <guid>https://jdongchen.github.io/blog/io%E6%A8%A1%E5%9E%8B/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>套接字</title>
+      <link>https://jdongchen.github.io/blog/%E5%A5%97%E6%8E%A5%E5%AD%97/</link>
+      <pubDate>Sat, 23 Oct 2021 18:58:46 +0800</pubDate>
+      
+      <guid>https://jdongchen.github.io/blog/%E5%A5%97%E6%8E%A5%E5%AD%97/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

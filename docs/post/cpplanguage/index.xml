@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CppLanguage on EastSnow</title>
+    <link>https://jdongchen.github.io/post/cpplanguage/</link>
+    <description>Recent content in CppLanguage on EastSnow</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 01 Jan 2022 14:28:41 +0800</lastBuildDate><atom:link href="https://jdongchen.github.io/post/cpplanguage/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>类型转换</title>
+      <link>https://jdongchen.github.io/blog/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</link>
+      <pubDate>Fri, 15 Oct 2021 20:45:24 +0800</pubDate>
+      
+      <guid>https://jdongchen.github.io/blog/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>模板</title>
+      <link>https://jdongchen.github.io/blog/%E6%A8%A1%E6%9D%BF/</link>
+      <pubDate>Thu, 14 Oct 2021 19:33:40 +0800</pubDate>
+      
+      <guid>https://jdongchen.github.io/blog/%E6%A8%A1%E6%9D%BF/</guid>
+      <description>&lt;p&gt;模板是C++中泛型编程的基础。一个模板就是一个创建类或函数的蓝图或者公式。当使用泛型类型或者泛型函数时，在编译时将蓝图转化为特定的类或者函数。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
