@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=''><title>类型转换</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='网络程序需要处理定时事件，比如定期检测一个客户连接的活动状态。服务器须有效的组织定时事件，使之能够在预期的时间点被触发且不影响服务器的主要逻辑。因此，我们需要将每个定时事件分别封装成定时器，以实现对定时事件的统一管理。
+'><title>定时器</title>
 
-<link rel='canonical' href='https://jdongchen.github.io/blog/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/'>
+<link rel='canonical' href='https://jdongchen.github.io/p/%E5%AE%9A%E6%97%B6%E5%99%A8/'>
 
-<link rel="stylesheet" href="/scss/style.min.775dbd4fd34fda61c5273b4bc3415f7c9666414fb6c40aab164a7ded4397da98.css"><meta property='og:title' content='类型转换'>
-<meta property='og:description' content=''>
-<meta property='og:url' content='https://jdongchen.github.io/blog/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/'>
+<link rel="stylesheet" href="/scss/style.min.775dbd4fd34fda61c5273b4bc3415f7c9666414fb6c40aab164a7ded4397da98.css"><meta property='og:title' content='定时器'>
+<meta property='og:description' content='网络程序需要处理定时事件，比如定期检测一个客户连接的活动状态。服务器须有效的组织定时事件，使之能够在预期的时间点被触发且不影响服务器的主要逻辑。因此，我们需要将每个定时事件分别封装成定时器，以实现对定时事件的统一管理。
+'>
+<meta property='og:url' content='https://jdongchen.github.io/p/%E5%AE%9A%E6%97%B6%E5%99%A8/'>
 <meta property='og:site_name' content='EastSnow'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2021-10-15T20:45:24&#43;08:00'/><meta property='article:modified_time' content='2021-10-15T20:45:24&#43;08:00'/>
-<meta name="twitter:title" content="类型转换">
-<meta name="twitter:description" content="">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2021-10-25T19:31:31&#43;08:00'/><meta property='article:modified_time' content='2021-10-25T19:31:31&#43;08:00'/>
+<meta name="twitter:title" content="定时器">
+<meta name="twitter:description" content="网络程序需要处理定时事件，比如定期检测一个客户连接的活动状态。服务器须有效的组织定时事件，使之能够在预期的时间点被触发且不影响服务器的主要逻辑。因此，我们需要将每个定时事件分别封装成定时器，以实现对定时事件的统一管理。
+">
     </head>
     <body class="
     article-page has-toc
@@ -63,17 +66,9 @@
 
     <div class="article-details">
     
-    <header class="article-category">
-        
-            <a href="/categories/language/" style="background-color: #2a9d8f; color: #fff;">
-                Language
-            </a>
-        
-    </header>
-    
 
     <h2 class="article-title">
-        <a href="/blog/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/">类型转换</a>
+        <a href="/p/%E5%AE%9A%E6%97%B6%E5%99%A8/">定时器</a>
     </h2>
 
     
@@ -91,7 +86,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Oct 15, 2021</time>
+                <time class="article-time--published">Oct 25, 2021</time>
             </div>
         
 
@@ -116,48 +111,43 @@
 </header>
 
     <section class="article-content">
-    <h2 id="const-限定符">const 限定符</h2>
-<p>const的引用：非常量引用不能指向常量对象；常量引用可以理解为不能通过引用改变对象的值。
-指针和const：普通指针不能指向常量对象；指向常量的指针不必规定所指对象为常量，仅要求不能通过指针修改对象值，但指针可以指向一个新的对象。
-const指针：指针是对象而引用不是，因此允许把指针本身定义为常量，常量指针必须初始化，一旦初始化完成，则指针的值也就是存放在指针中的地址就不能再改变了，指针本身不可变并不意味着指针所指对象不可变(根据对象是否为常量决定)。</p>
-<ul>
-<li>顶层const：指针本身为常量。</li>
-<li>底层const：指针所指对象为常量。</li>
-</ul>
-<h2 id="constexpr和常量表达式">constexpr和常量表达式</h2>
-<p>将变量声明为constexpr类型以由编译器验证变量的值是否是一个常量表达式。声明为constexpr的变量一定是个常量且必须用常量表达式初始化。
-指针和constexpr：在constexpr声明中定义指针，则该指针为常量指针，与该对象无关。
-constexpr函数：函数的返回类型以及所有的形参类型必须都是字面值类型，且函数体中必须只有一条return语句。</p>
-<h2 id="显式转换">显式转换</h2>
-<p>命名的强制类型转化：
-<code>cast-name&lt;type&gt;(expression)</code>
-其中<code>type</code>是转换的目标类型而<code>expression</code>是要转换的值。若<code>type</code>为引用，则结果为左值。<code>cast-name</code>包括static_cast、dynamic_cast、const_cast、reinterpret_cast中的一种。</p>
-<ul>
-<li>
-<p>static_cast
-任何具有明确定义的类型转换，只要不包含底层const，均可以使用<code>static_cast</code>。
-必须保证转换后所得的类型就是指针所指的类型，即地址值相等。
-可用于将左值转为右值。</p>
-</li>
-<li>
-<p>const_cast
-将常量对象转换为非常量对象的行为，即“cast away the const”。执行后允许对该对象进行写操作。const_cast 只能改变运算对象的底层const。
-可用于重载函数的上下文。</p>
-</li>
-<li>
-<p>reinterpret_cast
-通常为运算对象的位模式提供较低层次上的重新解释。</p>
-</li>
-<li>
-<p>dynamic_cast</p>
-</li>
-</ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">dynamic_cast</span><span class="o">&lt;</span><span class="n">type</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">e</span><span class="p">);</span><span class="c1">//e为指针
-</span><span class="c1"></span><span class="k">dynamic_cast</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&amp;&gt;</span><span class="p">(</span><span class="n">e</span><span class="p">);</span><span class="c1">//e为左值
-</span><span class="c1"></span><span class="k">dynamic_cast</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&amp;&amp;&gt;</span><span class="p">(</span><span class="n">e</span><span class="p">);</span><span class="c1">//e不能为左值
-</span></code></pre></div><p>其中，type是一个类类型，通常情况下含有虚函数。e的类型是目标type的公有派生类，e的类型是目标type的公有基类，或者e的类型就是目标type的类型。
-指针类型的dynamic_cast类型转化失败时，返回结果0。
-引用类型的dynamic_cast类型转化失败时，抛出std::bad_cast。</p>
+    <p>网络程序需要处理定时事件，比如定期检测一个客户连接的活动状态。服务器须有效的组织定时事件，使之能够在预期的时间点被触发且不影响服务器的主要逻辑。因此，我们需要将每个定时事件分别封装成定时器，以实现对定时事件的统一管理。</p>
+<h2 id="socket-选项">Socket 选项</h2>
+<p>Socket 中选项 SO_RCVTIMEO 和 SO_SNDTIMEO 分别用来设定socket接收数据超时时间和发送数据超时时间。因此，这两个选项仅对于数据接收和发送相关的socket专用系统调用，包括send、sendmsg、recv、recvmsg、accept、connect。</p>
+<h2 id="sigalarm信号">SIGALARM信号</h2>
+<p>Linux给其他进程发送信号的API是kill函数：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="kt">int</span> <span class="nf">kill</span><span class="p">(</span><span class="n">pid_t</span> <span class="n">pid</span><span class="p">,</span> <span class="kt">int</span> <span class="n">sig</span><span class="p">);</span>
+</code></pre></div><p>目标进程收到信号时，需要定义一个接收函数来处理之。
+网络编程相关的信号：SIGHUP、SIGPIPE、SIGURG、SIGALRM、SIGCHLD。
+若程序在执行处于阻塞状态的系统调用时接收到信号，并且为该信号设置了信号处理函数，则默认情况下系统调用将被中断。
+系统调用函数：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="n">_sighandler_t</span> <span class="nf">signal</span> <span class="p">(</span><span class="kt">int</span> <span class="n">sig</span><span class="p">,</span> <span class="n">_sighandler_t</span> <span class="n">_handler</span><span class="p">);</span>
+<span class="kt">int</span> <span class="nf">sigaction</span><span class="p">(</span><span class="kt">int</span> <span class="n">sig</span><span class="p">,</span> <span class="k">const</span> <span class="k">struct</span> <span class="n">sigaction</span><span class="o">*</span> <span class="n">act</span><span class="p">,</span> <span class="k">struct</span> <span class="n">sigaction</span><span class="o">*</span> <span class="n">act</span><span class="p">);</span>
+</code></pre></div><p>信号集函数：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="c1">// sigset_t 是一个长形数组，表示一组信号，其中每个位表示一个信号
+</span><span class="c1"></span><span class="kt">int</span> <span class="nf">sigemptyset</span><span class="p">(</span><span class="n">sigset_t</span><span class="o">*</span> <span class="n">_set</span><span class="p">);</span> <span class="cm">/*清空信号集*/</span>
+<span class="kt">int</span> <span class="nf">sigfillset</span><span class="p">(</span><span class="n">sigset_t</span><span class="o">*</span> <span class="n">_set</span><span class="p">);</span> <span class="cm">/*在信号集中设置所有信号*/</span>
+<span class="kt">int</span> <span class="nf">sigaddset</span><span class="p">(</span><span class="n">sigset_t</span><span class="o">*</span> <span class="n">_set</span><span class="p">,,</span><span class="kt">int</span> <span class="n">_signo</span><span class="p">);</span> <span class="cm">/*添加*/</span>
+<span class="kt">int</span> <span class="nf">sigdelset</span><span class="p">(</span><span class="n">sigset_t</span><span class="o">*</span> <span class="n">_set</span><span class="p">,</span> <span class="kt">int</span> <span class="n">_signo</span><span class="p">);</span> <span class="cm">/*删除*/</span>
+<span class="kt">int</span> <span class="nf">sigismember</span><span class="p">(</span><span class="n">sigset_t</span><span class="o">*</span> <span class="n">_set</span><span class="p">,</span> <span class="kt">int</span> <span class="n">_signo</span><span class="p">);</span> <span class="cm">/*查找*/</span>
+</code></pre></div><p>信号处理函数和程序主循环是不同路线，因此需尽可能快的执行完毕，以确保不会被屏蔽。信号处理函数通常使用管道将信号传递给主循环；主循环使用I/O复用系统调用来监听管道的读端文件描述符上的可读事件。</p>
+<p>alarm函数可周期性的触发SIGALRM信号，该信号的信号处理函数可以这样设计：通知主循环执行定时器链表上的定时任务——关闭非活动的连接。</p>
+<h2 id="io复用系统调用的超时参数">I/O复用系统调用的超时参数</h2>
+<p>select/poll/epoll中的timeout参数。在定时期间若函数返回，则记录时间并减去时间重新处理。</p>
+<h2 id="时间轮">时间轮</h2>
+<p>链表排序的定时器需要遍历，因此效率低。
+时间轮采用哈希表的思想，将定时器散列到不同的链表上。
+该定时器类包含rotation和time_slot，对应转圈数和时间槽。
+插入规则：
+cs为当前槽，ts是插入槽，ti是定时时间，si是槽间隔转动时间，N为一周的槽数量
+$$
+ts = (cs +(ti/si))%N
+$$
+每次调用tick，若定时器rotation &gt; 0，则&ndash;；否则，执行任务，删除该定时器。</p>
+<h2 id="时间堆">时间堆</h2>
+<p>前面的方案是以固定的频率调用函数tick，在其中检测定时器，执行回调函数。
+新思路：将所有定时器中超时最小的定时器的超时值作为间隔。一旦tick被调用，则超时时间最小的定时器必然到期，处理该定时器，并在处理函数中重新设置定时器间隔的值。
+数据结构最小堆适合该定时方案</p>
 </section>
 
 
@@ -263,7 +253,7 @@ constexpr函数：函数的返回类型以及所有的形参类型必须都是�
     <section class="copyright">
         &copy; 
         
-            2021 - 
+            2020 - 
         
         2022 EastSnow
     </section>
@@ -374,9 +364,11 @@ constexpr函数：函数的返回类型以及所有的形参类型必须都是�
                 <div class="widget--toc">
                     <nav id="TableOfContents">
   <ol>
-    <li><a href="#const-限定符">const 限定符</a></li>
-    <li><a href="#constexpr和常量表达式">constexpr和常量表达式</a></li>
-    <li><a href="#显式转换">显式转换</a></li>
+    <li><a href="#socket-选项">Socket 选项</a></li>
+    <li><a href="#sigalarm信号">SIGALARM信号</a></li>
+    <li><a href="#io复用系统调用的超时参数">I/O复用系统调用的超时参数</a></li>
+    <li><a href="#时间轮">时间轮</a></li>
+    <li><a href="#时间堆">时间堆</a></li>
   </ol>
 </nav>
                 </div>

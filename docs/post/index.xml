@@ -6,6 +6,24 @@
     <description>Recent content in Posts on EastSnow</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 01 Jan 2022 14:28:41 +0800</lastBuildDate><atom:link href="https://jdongchen.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 Jan 2022 15:55:18 +0800</lastBuildDate><atom:link href="https://jdongchen.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test</title>
+      <link>https://jdongchen.github.io/p/test/</link>
+      <pubDate>Fri, 07 Jan 2022 15:55:18 +0800</pubDate>
+      
+      <guid>https://jdongchen.github.io/p/test/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ThemeSyntax</title>
+      <link>https://jdongchen.github.io/p/themesyntax/</link>
+      <pubDate>Sat, 01 Jan 2022 19:46:08 +0800</pubDate>
+      
+      <guid>https://jdongchen.github.io/p/themesyntax/</guid>
+      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>
