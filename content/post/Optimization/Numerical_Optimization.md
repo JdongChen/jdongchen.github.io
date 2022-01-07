@@ -11,7 +11,7 @@ draft: true
 
 image: 
 tags: []
-categories: []
+categories: ["Optimization"]
 ---
 本文主要介绍了基本的数值优化原理和方案。
 
