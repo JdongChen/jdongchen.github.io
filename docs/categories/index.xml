@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on EastSnow</title>
+    <link>https://jdongchen.github.io/categories/</link>
+    <description>Recent content in Categories on EastSnow</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 08 Jan 2022 19:51:06 +0800</lastBuildDate><atom:link href="https://jdongchen.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Syntax</title>
+      <link>https://jdongchen.github.io/categories/syntax/</link>
+      <pubDate>Sat, 08 Jan 2022 19:51:06 +0800</pubDate>
+      
+      <guid>https://jdongchen.github.io/categories/syntax/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Optimization</title>
+      <link>https://jdongchen.github.io/categories/optimization/</link>
+      <pubDate>Fri, 07 Jan 2022 14:58:42 +0800</pubDate>
+      
+      <guid>https://jdongchen.github.io/categories/optimization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Language</title>
+      <link>https://jdongchen.github.io/categories/language/</link>
+      <pubDate>Sat, 01 Jan 2022 14:28:41 +0800</pubDate>
+      
+      <guid>https://jdongchen.github.io/categories/language/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NetWork</title>
+      <link>https://jdongchen.github.io/categories/network/</link>
+      <pubDate>Sat, 01 Jan 2022 14:27:52 +0800</pubDate>
+      
+      <guid>https://jdongchen.github.io/categories/network/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

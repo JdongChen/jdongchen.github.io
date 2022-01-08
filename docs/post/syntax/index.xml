@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Syntax on EastSnow</title>
+    <link>https://jdongchen.github.io/post/syntax/</link>
+    <description>Recent content in Syntax on EastSnow</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 08 Jan 2022 19:51:06 +0800</lastBuildDate><atom:link href="https://jdongchen.github.io/post/syntax/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Buttons</title>
+      <link>https://jdongchen.github.io/p/buttons/</link>
+      <pubDate>Sat, 08 Jan 2022 19:51:06 +0800</pubDate>
+      
+      <guid>https://jdongchen.github.io/p/buttons/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Columns</title>
+      <link>https://jdongchen.github.io/p/columns/</link>
+      <pubDate>Sat, 08 Jan 2022 19:51:06 +0800</pubDate>
+      
+      <guid>https://jdongchen.github.io/p/columns/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Details</title>
+      <link>https://jdongchen.github.io/p/details/</link>
+      <pubDate>Sat, 08 Jan 2022 19:51:06 +0800</pubDate>
+      
+      <guid>https://jdongchen.github.io/p/details/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Expand</title>
+      <link>https://jdongchen.github.io/p/expand/</link>
+      <pubDate>Sat, 08 Jan 2022 19:51:06 +0800</pubDate>
+      
+      <guid>https://jdongchen.github.io/p/expand/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hint</title>
+      <link>https://jdongchen.github.io/p/hint/</link>
+      <pubDate>Sat, 08 Jan 2022 19:51:06 +0800</pubDate>
+      
+      <guid>https://jdongchen.github.io/p/hint/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KaTeX</title>
+      <link>https://jdongchen.github.io/p/katex/</link>
+      <pubDate>Sat, 08 Jan 2022 19:51:06 +0800</pubDate>
+      
+      <guid>https://jdongchen.github.io/p/katex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mermaid</title>
+      <link>https://jdongchen.github.io/p/mermaid/</link>
+      <pubDate>Sat, 08 Jan 2022 19:51:06 +0800</pubDate>
+      
+      <guid>https://jdongchen.github.io/p/mermaid/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tabs</title>
+      <link>https://jdongchen.github.io/p/tabs/</link>
+      <pubDate>Sat, 08 Jan 2022 19:51:06 +0800</pubDate>
+      
+      <guid>https://jdongchen.github.io/p/tabs/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

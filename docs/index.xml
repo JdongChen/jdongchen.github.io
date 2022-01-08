@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>EastSnow</title>
+        <link>https://jdongchen.github.io/</link>
+        <description>Recent content on EastSnow</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Sat, 08 Jan 2022 19:51:06 +0800</lastBuildDate><atom:link href="https://jdongchen.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>数值优化</title>
+        <link>https://jdongchen.github.io/p/%E6%95%B0%E5%80%BC%E4%BC%98%E5%8C%96/</link>
+        <pubDate>Fri, 07 Jan 2022 14:58:42 +0800</pubDate>
+        
+        <guid>https://jdongchen.github.io/p/%E6%95%B0%E5%80%BC%E4%BC%98%E5%8C%96/</guid>
+        <description>&lt;p&gt;本文主要介绍了基本的数值优化原理和方案。&lt;/p&gt;
+&lt;h2 id=&#34;优化问题基本概念&#34;&gt;优化问题基本概念&lt;/h2&gt;
+&lt;p&gt;优化问题主要包含三个部分：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;目标函数，$f(x)$，该函数用于最大化或最小化。&lt;/li&gt;
+&lt;li&gt;决策变量&lt;/li&gt;
+&lt;li&gt;约束条件，如等式约束或不等式约束。&lt;br&gt;
+数学形式如下：
+
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://jdongchen.github.io/katex/katex.min.css&#34; /&gt;
+&lt;script defer src=&#34;https://jdongchen.github.io/katex/katex.min.js&#34;&gt;&lt;/script&gt;
+&lt;script defer src=&#34;https://jdongchen.github.io/katex/auto-render.min.js&#34; onload=&#34;renderMathInElement(document.body);&#34;&gt;&lt;/script&gt;&lt;span&gt;
+  \[\begin{array}{cl}
+\underset{x \in \mathbb{R}^{n}}{\operatorname{minimize}} &amp;amp; f(x) \\
+\text { subject to } &amp;amp; g(x)=0, \\
+&amp;amp; h(x) \geq 0 .
+\end{array}\]
+&lt;/span&gt;
+
+上式中，$f: \mathbb{R}^{n} \rightarrow \mathbb{R}， g: \mathbb{R}^{n} \rightarrow \mathbb{R}^{p}，h: \mathbb{R}^{n} \rightarrow \mathbb{R}^{q}$，通常被认为是可微的。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;span&gt;
+  \[\begin{array}{cl}
+\underset{x \in \mathbb{R}^{n}}{\operatorname{minimize}} &amp;amp; f(x) \\
+\text { subject to } &amp;amp; g(x)=0, \\
+&amp;amp; h(x) \geq 0 .
+\end{array}\]
+&lt;/span&gt;
+
+&lt;p&gt;Here, $f: \mathbb{R}^{n} \rightarrow \mathbb{R}, g: \mathbb{R}^{n} \rightarrow \mathbb{R}^{p}, h: \mathbb{R}^{n} \rightarrow \mathbb{R}^{q}$, are usually assumed to be differentiable. Note that the inequalities hold for all components, i.e.
+$$
+h(x) \geq 0 \quad \Leftrightarrow \quad h_{i}(x) \geq 0, \quad i=1, \ldots, q .
+$$ &lt;br&gt;
+Example 1.1 (A two dimensional example):&lt;/p&gt;
+&lt;h2 id=&#34;无约束优化和牛顿型方法&#34;&gt;无约束优化和牛顿型方法&lt;/h2&gt;
+&lt;h2 id=&#34;等式约束优化&#34;&gt;等式约束优化&lt;/h2&gt;
+&lt;h2 id=&#34;不等式约束优化&#34;&gt;不等式约束优化&lt;/h2&gt;</description>
+        </item>
+        
+    </channel>
+</rss>
