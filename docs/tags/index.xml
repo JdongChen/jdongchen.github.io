@@ -5,11 +5,12 @@
     <link>https://jdongchen.github.io/tags/</link>
     <description>Recent content in Tags on EastSnow</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language><atom:link href="https://jdongchen.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 28 Oct 2021 10:39:11 +0800</lastBuildDate><atom:link href="https://jdongchen.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LinuxIPC</title>
       <link>https://jdongchen.github.io/tags/linuxipc/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 28 Oct 2021 10:39:11 +0800</pubDate>
       
       <guid>https://jdongchen.github.io/tags/linuxipc/</guid>
       <description></description>
