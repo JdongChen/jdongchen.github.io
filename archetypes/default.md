@@ -7,7 +7,7 @@ lastmod: {{ .Date }}
 
 comments: true
 hidden: true
-draft: true
+draft: false
 
 image: 
 tags: []
